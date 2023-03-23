@@ -1,3 +1,19 @@
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "abstract/functions";
+@import "abstract/mixins";
+@import "abstract/variables";
+
+@import "pages/home";
+
+@import "component/button";
+@import "layout/header";
+
+
+
 *
 {
     margin: 0;
@@ -13,61 +29,23 @@ line-height: 1.7;
 color:gray;
 
 }
-.header
-{
-    height: 95vh;
-    background-image: linear-gradient(to right bottom,rgba(126, 213, 111, 0.7),rgba(85, 197, 122, 0.701)),url(../image/hero.jpg);
-    background-size: cover;
-    background-position: top;
-    clip-path: polygon(0% 0%, 100% 0, 100% 80% , 0% 100%);
-    position: relative;
 
-}
-.logo-box{
-position: absolute;
-top:40px;
-left:40px;
-}
-.logo{
-    height: 40px;
-    
-}
-.logo:hover {
-    animation: moveInRight 3s ease-in-out;
-}
-.text-box{
-position: absolute;
-top:50%;
-left:50%;
-transform: translate(-50%,-50%);
-text-align: center;
 
-}
+$color-primary:white;
 
-.heading-primary {
-color: #ffff;
-text-transform: uppercase;
-backface-visibility: hidden;
-margin-bottom: 60px;
-}
-.heading-primary-main {
-    display: block;
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 30px;
-    animation-name: moveInLeft;
-    animation-duration: 3s;
-    animation-timing-function: ease-out;
-}
-.heading-primary-sub{
-    display: block;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 15px;
-    animation-name: moveInRight;
-    animation-duration: 3s;
-    animation-timing-function: ease-out;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes moveInLeft{
     0%{
         opacity:0;
@@ -96,6 +74,30 @@ margin-bottom: 60px;
 
     }
 }
+.heading-primary {
+    color: #ffff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 60px;
+    }
+    .heading-primary--main {
+        display: block;
+        font-size: 60px;
+        font-weight: 400;
+        letter-spacing: 30px;
+        animation-name: moveInLeft;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+    }
+    .heading-primary--sub{
+        display: block;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 15px;
+        animation-name: moveInRight;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+    }
 .btn:link,
 .btn:visited{
     text-transform: uppercase;
@@ -103,11 +105,18 @@ margin-bottom: 60px;
     padding: 15px 40px ;
     display: inline-block;
     border-radius: 100px;
-    transition: all .2s;
+    transition: all .5s;
+    font-weight:540 ;
+    color:rgb(12, 5, 1);
+    background-color: azure;
+    
 }
 .btn:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px white;
+    color:white;
+    font-weight: 600;
+    background-color: darkslategrey;
 }
 .btn:active{
     transform: translateY(-1px);
@@ -139,16 +148,37 @@ margin-bottom: 60px;
     color:white;
     opacity: 0;
 }
+.header
+{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,rgba(78, 95, 75, 0.7),rgba(58, 70, 62, 0.701)),url(http://static2.businessinsider.com/image/5a74efbcaf61d8811b8b4ba8-2000/img2706.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0% 0%, 100% 0, 100% 80% , 0% 100%);
+    position: relative;
 
+}
+.header__logo-box{
+position: absolute;
+top:30px;
+left:30px;
+}
+.header__logo{
+    height: 180px;
+   
+    
+}
+.header__logo:hover {
+    animation: moveInRight 3s ease-in-out;
+}
+.header__text-box{
+position: absolute;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+text-align: center;
 
-
-
-
-
-
-
-
-
+}
 
 
 
